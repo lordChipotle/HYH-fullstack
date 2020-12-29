@@ -1,0 +1,96 @@
+<head>
+  <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+    integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="//fonts.googleapis.com/css?family=Comfortaa"
+  />
+</head>
+
+<body>
+    <a href="nav/browse" style="font-family: Comfortaa;color: rgb(79, 145, 245)"> <em>< Back to Browse</em></a><br>
+    <h1 style="color: rgb(79, 145, 245)">{{twitterUser.name}}'s Profile</h1>
+    <mat-tab-group>
+        <!-- Below is the first tab, displaying data from Twitter. -->
+        <mat-tab label="Twitter">
+            <br>
+            <div>
+                <div class="row">
+                    <div class="biocol1 center">
+                        <img class="face" src={{twitterUser.profile_image_url}} alt="Avatar" style="width:200px"><br>
+                        <button type="button" class="contactButton">Message</button>
+                    </div>
+                    <div class="biocol2"></div>
+                    <div class="biocol3">
+                        <h3>@{{twitterUser.screen_name}}</h3>
+                        <h1>{{twitterUser.name}}</h1>
+                    </div>
+                    <div class="biocol4"></div>
+                    <div class="biocol5">
+                        <h4>Followers</h4>
+                        <h1>{{twitterUser.followers_count}}</h1>
+                        <h4>Following</h4>
+                        <h1>{{twitterUser.friends_count}}</h1>
+                        <div class="inline-block-child">
+                            <h4>ER</h4>
+                        </div> &nbsp;
+                        <div class="inline-block-child">
+                            <i title="This engagement rate has been calculated by dividing the total number of favorites and retweets of a randomly selected tweet by the total number of followers." class="far fa-question-circle"></i>
+                        </div>
+                        <h1>{{((twitterUser.status.favorite_count + twitterUser.status.retweet_count) / twitterUser.followers_count) * 100}}%</h1>
+                        <hr>
+                        <p>Total # of posts: {{twitterUser.statuses_count}}</p>
+                    </div>
+                </div>
+                <hr>
+                <!-- Below are placeholders of aggregate data from Twitter. It should display graphs for each component. -->
+                <div class="row">
+                    <div class="row2col1">
+                        <h2>Latest Posts</h2>
+                        <p>*embed posts from twitter?</p>
+                    </div>
+                    <div class="row2col2">
+                        <h2>Bio</h2>
+                        <p>Lorem ispum</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="row3col">
+                        <h2># of Posts Last Month</h2>
+                        <p>*graph</p>
+                    </div>
+                    <div class="row3col">
+                        <h2>Most Used Hashtag</h2>
+                        <p>*graph</p>
+                    </div>
+                    <div class="row3col">
+                        <h2>Audience Type</h2>
+                        <p>*graph</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="row3col">
+                        <h2>Follower Growth</h2>
+                        <p>*graph</p>
+                    </div>
+                    <div class="row3col">
+                        <h2>Popularity by Month</h2>
+                        <p>*graph</p>
+                    </div>
+                    <div class="row3col">
+                        <h2>Audience Ethnicity</h2>
+                        <p>*graph</p>
+                    </div>
+                </div>
+            </div>
+        </mat-tab>
+        <!-- Create more tabs for Instagram, Facebook, etc. here.
+            Copy and paste the above code within <mat-tab></mat-tab>,
+            changing "twitterUser" to the corresponding platform model. -->
+    </mat-tab-group>
+</body>

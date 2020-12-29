@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <header>
+    <link
+      href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Bungee+Inline|Bungee+Outline|Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <mat-toolbar>
+      <span class="example-spacer"></span>
+      <div align="end" *ngFor="let nav of nav">
+        <a class="left right" (click)="navTo(nav)">
+          <u>{{ nav.name }}</u>
+        </a>
+      </div>
+    </mat-toolbar>
+  </header>
+  <body class="background">
+    <img class="welcome" src="assets/dotsLogo.JPG" />
+  </body>
+</html>
