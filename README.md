@@ -39,3 +39,9 @@ Switch to master branch with git checkout master:
 3. `git add .`
 4. `git commit -m "Comments"`
 5. `git push origin master`
+## Contributors
+@shanjng
+@superbrobenji
+@eunkyojo
+@pmb9er
+@christinacampbell98
